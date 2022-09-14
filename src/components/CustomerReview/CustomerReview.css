@@ -1,0 +1,10 @@
+.CustomerReview {
+    width: 85%;
+    background: #2c5364;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    padding-bottom: 0.1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}

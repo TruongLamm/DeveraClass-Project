@@ -9,32 +9,36 @@ import { motion } from "framer-motion";
 const Sidebar = () => {
   const [selected, setSelected] = useState(0);
 
-  const [expanded, setExpaned] = useState(true)
+  const [expanded, setExpaned] = useState(true);
 
   const sidebarVariants = {
     true: {
-      left: '0'
+      left: "0",
     },
     false: {
-      left: '-60%'
-    }
-  }
-  console.log(window.innerWidth)
+      left: "-60%",
+    },
+  };
+
+  console.log(window.innerWidth);
   return (
     <>
-      <div className="bars" style={expanded ? { left: '60%' } : { left: '5%' }} onClick={() => setExpaned(!expanded)}>
+      <div
+        className="bars"
+        style={expanded ? { left: "60%" } : { left: "5%" }}
+        onClick={() => setExpaned(!expanded)}
+      >
         <UilBars />
       </div>
-      <motion.div className='sidebar'
+      <motion.div
+        className="sidebar"
         variants={sidebarVariants}
-        animate={window.innerWidth <= 768 ? `${expanded}` : ''}
+        animate={window.innerWidth <= 768 ? `${expanded}` : ""}
       >
         {/* logo */}
         <div className="logo">
           <img src={Logo} alt="logo" />
-          <span>
-            F2Store
-          </span>
+          <span>F2Store</span>
         </div>
 
         <div className="menu">
@@ -51,7 +55,7 @@ const Sidebar = () => {
             );
           })}
           {/* signoutIcon */}
-          <div className="menuItem">
+          <div className="">
             <UilSignOutAlt />
           </div>
         </div>
